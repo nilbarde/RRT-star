@@ -1,0 +1,2 @@
+rrt_star
+-DCATKIN_DEVEL_PREFIX=/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/install -G Unix Makefiles
