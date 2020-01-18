@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src/rrt_star/src/nil_rrt.cpp
+/home/viani/RISE/RRT-star/rrt_ws/src/rrt_star/src/nil_rrt.cpp
 iostream
 -
 vector
@@ -18,17 +18,17 @@ time.h
 math.h
 -
 ros/ros.h
-/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src/rrt_star/src/ros/ros.h
+/home/viani/RISE/RRT-star/rrt_ws/src/rrt_star/src/ros/ros.h
 std_msgs/Header.h
-/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src/rrt_star/src/std_msgs/Header.h
+/home/viani/RISE/RRT-star/rrt_ws/src/rrt_star/src/std_msgs/Header.h
 geometry_msgs/Pose.h
-/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src/rrt_star/src/geometry_msgs/Pose.h
+/home/viani/RISE/RRT-star/rrt_ws/src/rrt_star/src/geometry_msgs/Pose.h
 nav_msgs/MapMetaData.h
-/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src/rrt_star/src/nav_msgs/MapMetaData.h
+/home/viani/RISE/RRT-star/rrt_ws/src/rrt_star/src/nav_msgs/MapMetaData.h
 nav_msgs/OccupancyGrid.h
-/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src/rrt_star/src/nav_msgs/OccupancyGrid.h
+/home/viani/RISE/RRT-star/rrt_ws/src/rrt_star/src/nav_msgs/OccupancyGrid.h
 nav_msgs/Path.h
-/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src/rrt_star/src/nav_msgs/Path.h
+/home/viani/RISE/RRT-star/rrt_ws/src/rrt_star/src/nav_msgs/Path.h
 
 /opt/ros/kinetic/include/geometry_msgs/Point.h
 string

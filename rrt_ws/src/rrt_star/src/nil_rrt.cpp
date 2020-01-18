@@ -26,6 +26,8 @@ float stepSize= 4;
 float radius= 4;
 float goalRadius= 3;
 
+bool checkMap = false;
+
 ros::Publisher pubLocalMap, pubPath;
 
 struct Point
@@ -439,6 +441,79 @@ void pathPublish(vector<Point> Path)
     pubPath.publish(poses);
 
 }
+
+void RoadCallback(const nav_msgs::OccupancyGrid::ConstPtr& msg)
+{
+	//cout<<666666<<endl;
+	if(!msg->data.empty())
+	{
+		checkMap = true;
+
+		int i,j;
+		mapW = msg->info.width;
+		mapH = msg->info.height;
+		//begx = mapW/2;
+		//begy = 0;
+		//goalx = 20;
+		//goaly = 20;
+
+		std::vector<int> v;
+		for (i=0; i<mapW; i++) v.push_back(0);
+		for (i=0; i<mapH; i++) mapObst.push_back(v);
+
+			//cout << "2\n";
+
+		for(i=0;i<mapH;i++)//putting values
+		{
+			for(j=0;j<mapW;j++)
+			{
+				// int i1;
+				// i1=mapH-1-i;
+				// cout << "data: " << msg->data[i*mapW+j] << endl;
+				if(msg->data[i*mapW+j]>=40)
+				{
+					mapObst[i][j] = int(msg->data[i*mapW+j]);
+					// cout<<int(msg->data[i*mapW+j])<<endl;
+				}
+			}
+		}
+
+			// for (int i : msg->data)
+			// 	if(i!=0)
+			// 	{cout << "data: "<<i << "YAY"<< endl;
+			// 	}
+
+		// for(int i = 0; i<mapW; i++)
+		// {
+		// 	for(int j= 0; j<mapH;j++)
+		// 	{
+		// 		cout<<mapObst[i][j]<<", ";
+		// 	}
+		// 	cout<<endl;
+		// }
+
+		// vector<Point> Path;
+ 	//cout<<"###"<<checkMap<<endl;
+	}
+
+  
+	// if(checkMap == true )
+	// 	{
+
+	// 	  	//cout<<2222;
+	// 	  	vector<Node*> Path_nodes= findPath();
+	// 	  	//cout<<"%%%%%%%%%%%%%%%%%"<<endl;
+	// 	  	//cout<<555<<endl<<Path_nodes.size()<<endl;
+		  	
+	// 	  	for(int i=0; i< Path_nodes.size(); i++)
+	// 	  	{
+	// 	  		nowPath.push_back(Path_nodes[i]->P);
+	// 	  	}
+	// 	}
+
+	// 	pathPublish(nowPath);
+}
+
 int main(int argc, char **argv)
 {
     cout<<"stoply started\n";
@@ -446,7 +521,8 @@ int main(int argc, char **argv)
 
 	ros::init(argc,argv,"rrt");
 
-	ros::NodeHandle mapPubNode;
+	ros::NodeHandle mapPubNode, LRSubNode;
+	ros::Subscriber SubRoad = LRSubNode.subscribe<nav_msgs::OccupancyGrid>("occ_map", 1, RoadCallback);
 
 	pubLocalMap = mapPubNode.advertise<nav_msgs::OccupancyGrid>("/scan/local_map",1);
 	pubPath = mapPubNode.advertise<nav_msgs::Path>("PATH", 1);;

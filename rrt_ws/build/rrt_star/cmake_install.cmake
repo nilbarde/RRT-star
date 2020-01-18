@@ -1,8 +1,8 @@
-# Install script for directory: /home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src/rrt_star
+# Install script for directory: /home/viani/RISE/RRT-star/rrt_ws/src/rrt_star
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/viani/RISE/RRT-star/rrt_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/build/rrt_star/catkin_generated/installspace/rrt_star.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/viani/RISE/RRT-star/rrt_ws/build/rrt_star/catkin_generated/installspace/rrt_star.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrt_star/cmake" TYPE FILE FILES
-    "/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/build/rrt_star/catkin_generated/installspace/rrt_starConfig.cmake"
-    "/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/build/rrt_star/catkin_generated/installspace/rrt_starConfig-version.cmake"
+    "/home/viani/RISE/RRT-star/rrt_ws/build/rrt_star/catkin_generated/installspace/rrt_starConfig.cmake"
+    "/home/viani/RISE/RRT-star/rrt_ws/build/rrt_star/catkin_generated/installspace/rrt_starConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrt_star" TYPE FILE FILES "/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src/rrt_star/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrt_star" TYPE FILE FILES "/home/viani/RISE/RRT-star/rrt_ws/src/rrt_star/package.xml")
 endif()
 

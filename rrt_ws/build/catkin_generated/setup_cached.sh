@@ -7,9 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PWD="/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src:$ROS_PACKAGE_PATH"
+export PWD="/home/viani/RISE/RRT-star/rrt_ws/build"
+export ROS_PACKAGE_PATH="/home/nil/Nil/Innovation_Cell/SeDriCa/RRT/my_ws/src:/home/viani/RISE/RRT-star/rrt_ws/src:/opt/ros/kinetic/share"
